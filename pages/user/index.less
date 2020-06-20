@@ -1,0 +1,120 @@
+/* pages/user/index.wxss */
+page {
+  background-color: #cccccc;
+}
+
+.user_info_wrap {
+  height: 45vh;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--themeColor);
+
+  .user_img_wrap {
+    position: relative;
+
+    .user_bg {
+      height: 45vh;
+      filter: blur(5px);
+    }
+
+    .user_info {
+      position: absolute;
+      left: 50%;
+      top: 25%;
+      transform: translateX(-50%);
+      text-align: center;
+
+      .user_icon {
+        width: 150rpx;
+        height: 150rpx;
+        border-radius: 50%;
+      }
+
+      .user_name {
+        color: #fff;
+        font-size: 40rpx;
+        margin-top: 20rpx;
+      }
+    }
+  }
+
+  .user_btn {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translateX(-50%);
+    border: 1px solid rgb(45, 214, 73);
+    font-size: 38rpx;
+    padding: 30rpx;
+    border-radius: 10rpx;
+  }
+}
+
+.user_content {
+  background-color: #fff;
+  position: relative;
+  .user_main {
+    color: #666;
+    padding-bottom: 100rpx;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    top:-40rpx;
+    .history_wrap {
+      background-color: #fff;
+      display: flex;
+      navigator {
+        flex:1;
+        text-align: center;
+        .his_num {
+          color: var(--themeColor);
+        }
+      }
+    }
+  }
+}
+
+.orders_wrap{
+  background-color: #fff;
+  margin-top: 30rpx;
+
+  .orders_title{
+    padding: 20rpx;
+    border-bottom: 2rpx solid #ccc;
+  }
+  .order_content{
+    display: flex;
+    navigator{
+      padding: 15rpx 0;
+      flex:1;
+      text-align: center;
+      .iconfont{
+        color: var(--themeColor);
+      }
+    }
+  }
+}
+
+.address_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}
+.app_info_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+  .app_info_item{
+    padding: 20rpx;
+    border-bottom: 1px solid #ccc;
+  }
+  .app_info_contact{
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.recommend_wrap{
+  margin-top: 30rpx;
+  background-color: #fff;
+  padding: 20rpx;
+}

@@ -1,0 +1,25 @@
+<!--pages/goods_list/index.wxml-->
+<searchInput></searchInput>
+<tabs tabs="{{tabs}}" binditemChange="handleItemTap">
+  <block wx:if="{{tabs[0].isActive}}">
+    <view class="first_tab">
+      <navigator class="goods_list"
+      wx:for="{{goodsList}}"
+      wx:key="goods_id"
+      url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+      >
+      <!--左侧图片-->
+        <view class="goods_img_wrap">
+           <image src="{{item.goods_small_logo || 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1590835495&di=34a2c1be4eb0c3c4ce9a9f97887e281a&src=http://n.sinaimg.cn/sinacn/20171021/3083-fymzzpv8409459.jpg'}}" mode="widthFix"></image>             
+        </view>
+      <!--右侧商品-->
+        <view class="goods_info_wrap">
+          <view class="goods_name">{{item.goods_name}}</view>
+          <view class="goods_price">￥{{item.goods_price}}</view>
+        </view>
+      </navigator>
+    </view>
+  </block>
+  <block wx:elif="{{tabs[1].isActive}}">1</block>
+  <block wx:elif="{{tabs[2].isActive}}">2</block>  
+</tabs>

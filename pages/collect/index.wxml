@@ -1,0 +1,29 @@
+<!--pages/collet/index.wxml-->
+<tabs tabs="{{tabs}}" binditemChange="handleItemTap">
+   <view class="collect_main">
+     <view class="collect_title">
+       <text class="collect_tips active">全部</text>
+       <text class="collect_tips">正在热卖</text>
+       <text class="collect_tips">即将上线</text>
+     </view>
+     <view class="collect_content">
+       <navigator class="goods_list"
+           wx:for="{{collect}}"
+           wx:key="goods_id"
+           url="/pages/goods_detail/index?goods_id={{item.goods_id}}"
+        >
+        <!--左侧图片-->
+        <view class="goods_img_wrap">
+           <image src="{{item.goods_small_logo || 'https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1590835495&di=34a2c1be4eb0c3c4ce9a9f97887e281a&src=http://n.sinaimg.cn/sinacn/20171021/3083-fymzzpv8409459.jpg'}}" mode="widthFix"></image>             
+        </view>
+        <!--右侧商品-->
+        <view class="goods_info_wrap">
+          <view class="goods_name">{{item.goods_name}}</view>
+          <view class="goods_price">￥{{item.goods_price}}</view>
+        </view>
+      </navigator>
+     </view>
+   </view>
+     
+</tabs>
+
